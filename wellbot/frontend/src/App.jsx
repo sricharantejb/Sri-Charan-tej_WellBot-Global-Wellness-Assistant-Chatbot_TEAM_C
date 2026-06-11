@@ -96,7 +96,7 @@ const Layout = ({ isSidebarCollapsed, setIsSidebarCollapsed, themeMode, toggleTh
 function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = React.useState(false);
   const [themeMode, setThemeMode] = React.useState(localStorage.getItem('wellbot_theme') || 'dark');
-  const clientId = "254016489653-vn6vq93s6dd9sklq69gbl9tj07gr26vl.apps.googleusercontent.com";
+  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
   React.useEffect(() => {
     document.body.setAttribute('data-theme', themeMode);
